@@ -7,7 +7,7 @@ const portfolioConfig = {
     whatsapp: "https://wa.me/923000437358",
     linkedin: "https://linkedin.com/in/musman100official",
     github: "https://github.com/useratnns",
-    fiverr: "https://www.fiverr.com/musman100"
+    fiverr: "https://www.fiverr.com/sellers/usman_devs/"
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -119,27 +119,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 4. Project Slider Interaction
     const setupSlider = () => {
-        const slides = document.querySelectorAll('.project-slide');
+        const imageSlides = document.querySelectorAll('.project-image-slide');
+        const infoSlides = document.querySelectorAll('.project-info-slide');
         const indicators = document.querySelectorAll('.indicator');
         const prevBtn = document.querySelector('.prev-btn');
         const nextBtn = document.querySelector('.next-btn');
         let currentSlide = 0;
         let slideInterval;
 
-        if (slides.length === 0) return;
+        if (imageSlides.length === 0 || infoSlides.length === 0) return;
 
         const showSlide = (index) => {
             // Remove active classes
-            slides.forEach(s => s.classList.remove('active'));
+            imageSlides.forEach(s => s.classList.remove('active'));
+            infoSlides.forEach(s => s.classList.remove('active'));
             indicators.forEach(i => i.classList.remove('active'));
 
             // Handle wrap-around
-            if (index >= slides.length) currentSlide = 0;
-            else if (index < 0) currentSlide = slides.length - 1;
+            if (index >= imageSlides.length) currentSlide = 0;
+            else if (index < 0) currentSlide = imageSlides.length - 1;
             else currentSlide = index;
 
             // Add active classes
-            slides[currentSlide].classList.add('active');
+            imageSlides[currentSlide].classList.add('active');
+            infoSlides[currentSlide].classList.add('active');
             indicators[currentSlide].classList.add('active');
         };
 
