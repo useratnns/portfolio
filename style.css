@@ -463,14 +463,15 @@ img {
     display: none;
     width: 100%;
     flex-shrink: 0;
-    grid-template-columns: 1.2fr 1fr;
+    flex-direction: column;
+    align-items: center;
     gap: 2rem;
     padding: 2.5rem;
     animation: fadeIn 0.5s ease-in-out;
 }
 
 .project-slide.active {
-    display: grid;
+    display: flex;
 }
 
 @keyframes fadeIn {
@@ -480,20 +481,20 @@ img {
 
 .project-slide-image {
     width: 100%;
-    height: 100%;
     border-radius: 8px;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--bg-color); /* filler background */
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
 }
 
 .project-slide-image img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Do not stretch or mask */
-    max-height: 400px;
+    max-height: 500px;
+    object-fit: contain;
     border-radius: 8px;
 }
 
@@ -501,6 +502,10 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
 }
 
 .project-category {
@@ -528,6 +533,7 @@ img {
 .project-tags {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 0.5rem;
     margin-bottom: 2rem;
 }
@@ -601,7 +607,6 @@ img {
 
 @media (max-width: 992px) {
     .project-slide {
-        grid-template-columns: 1fr;
         padding: 2rem;
     }
     .project-slide-image {
@@ -617,8 +622,15 @@ img {
         font-size: 1.5rem;
     }
     .project-slide-image {
-        max-height: 250px;
-    }
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+}
 }
 /* ==========================================================================
    Process Section (How I Turn Your Idea Into A Product)
