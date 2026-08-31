@@ -115,35 +115,79 @@ document.addEventListener('DOMContentLoaded', () => {
     injectLinks();
     setupMobileMenu();
     setupFAQ();
-});
 
-// 4. Gallery Interaction
-document.addEventListener('DOMContentLoaded', () => {
-    const carousel = document.querySelector('.gallery-carousel');
-    const items = document.querySelectorAll('.gallery-item');
-    if (!carousel) return;
 
-    let currentRotation = 0;
+    // 4. Project Slider Interaction
+    const setupSlider = () => {
+        const slides = document.querySelectorAll('.project-slide');
+        const indicators = document.querySelectorAll('.indicator');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        let currentSlide = 0;
+        let slideInterval;
 
-    items.forEach((item, index) => {
-        item.addEventListener('click', () => {
-            // Calculate how much to rotate so the clicked item faces front.
-            // Items are at 0, 72, 144, 216, 288 degrees.
-            const itemRotation = index * 72;
+        if (slides.length === 0) return;
 
-            // We want the carousel to rotate backwards relative to the item's position
-            // Add or subtract 360 to find the shortest path
+        const showSlide = (index) => {
+            // Remove active classes
+            slides.forEach(s => s.classList.remove('active'));
+            indicators.forEach(i => i.classList.remove('active'));
 
-            // Basic rotation logic to bring it front:
-            // currentRotation - (currentRotation % 360) gives the base rotation
-            let targetRotation = -itemRotation;
+            // Handle wrap-around
+            if (index >= slides.length) currentSlide = 0;
+            else if (index < 0) currentSlide = slides.length - 1;
+            else currentSlide = index;
 
-            // Stop auto animation to allow manual control
-            carousel.style.animation = 'none';
+            // Add active classes
+            slides[currentSlide].classList.add('active');
+            indicators[currentSlide].classList.add('active');
+        };
 
-            // Set smooth transition
-            carousel.style.transition = 'transform 0.8s ease-out';
-            carousel.style.transform = `rotateY(${targetRotation}deg)`;
+        const nextSlide = () => {
+            showSlide(currentSlide + 1);
+        };
+
+        const prevSlide = () => {
+            showSlide(currentSlide - 1);
+        };
+
+        // Manual Navigation
+        if (nextBtn) nextBtn.addEventListener('click', () => {
+            nextSlide();
+            resetInterval();
         });
-    });
+
+        if (prevBtn) prevBtn.addEventListener('click', () => {
+            prevSlide();
+            resetInterval();
+        });
+
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                showSlide(index);
+                resetInterval();
+            });
+        });
+
+        // Auto Navigation
+        const startInterval = () => {
+            slideInterval = setInterval(nextSlide, 5000);
+        };
+
+        const resetInterval = () => {
+            clearInterval(slideInterval);
+            startInterval();
+        };
+
+        // Pause on hover
+        const showcase = document.querySelector('.project-showcase');
+        if (showcase) {
+            showcase.addEventListener('mouseenter', () => clearInterval(slideInterval));
+            showcase.addEventListener('mouseleave', startInterval);
+        }
+
+        startInterval();
+    };
+
+    setupSlider();
 });
