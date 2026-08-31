@@ -445,13 +445,6 @@ img {
     position: relative;
     max-width: 1000px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-}
-
-.project-gallery-component {
-    position: relative;
     background: var(--bg-secondary);
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
@@ -459,30 +452,43 @@ img {
     box-shadow: var(--box-shadow);
 }
 
-.project-image-slider {
+.project-slider {
     position: relative;
     width: 100%;
+    /* Create a fixed height to avoid jumpiness, or rely on flex */
     display: flex;
-    background: var(--bg-color);
 }
 
-.project-image-slide {
+.project-slide {
     display: none;
     width: 100%;
     flex-shrink: 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2.5rem;
     animation: fadeIn 0.5s ease-in-out;
 }
 
-.project-image-slide.active {
-    display: block;
+.project-slide.active {
+    display: flex;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .project-slide-image {
     width: 100%;
+    border-radius: 8px;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    margin: 0 auto;
 }
 
 .project-slide-image img {
@@ -490,93 +496,7 @@ img {
     height: 100%;
     max-height: 500px;
     object-fit: contain;
-}
-
-.slider-controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1.5rem 2.5rem;
-    background: var(--bg-tertiary);
-    border-top: 1px solid var(--border-color);
-}
-
-.slider-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(13, 17, 23, 0.7); /* translucent dark background */
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: var(--text-white);
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    z-index: 10;
-    opacity: 0; /* hidden until hover */
-}
-
-/* Hover areas on the gallery component */
-.project-gallery-component:hover .prev-btn,
-.project-gallery-component:hover .next-btn {
-    opacity: 0.5; /* partially visible when hovering gallery */
-}
-
-.prev-btn {
-    left: 20px;
-}
-
-.next-btn {
-    right: 20px;
-}
-
-.slider-btn:hover {
-    opacity: 1 !important;
-    background: rgba(13, 17, 23, 0.95);
-    color: var(--accent-primary);
-    border-color: var(--accent-primary);
-    transform: translateY(-50%) scale(1.1);
-}
-
-.slider-indicators {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.indicator {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: var(--text-secondary);
-    border: none;
-    cursor: pointer;
-    transition: var(--transition);
-    opacity: 0.5;
-}
-
-.indicator.active {
-    background: var(--accent-primary);
-    opacity: 1;
-    transform: scale(1.2);
-}
-
-.project-info-component {
-    width: 100%;
-}
-
-.project-info-slide {
-    display: none;
-    width: 100%;
-    animation: fadeIn 0.5s ease-in-out;
-}
-
-.project-info-slide.active {
-    display: block;
+    border-radius: 8px;
 }
 
 .project-slide-content {
@@ -587,7 +507,6 @@ img {
     text-align: center;
     width: 100%;
     max-width: 800px;
-    margin: 0 auto;
 }
 
 .project-category {
@@ -623,19 +542,77 @@ img {
 .project-tags span {
     font-size: 0.85rem;
     padding: 0.35rem 1rem;
-    background: var(--bg-secondary);
+    background: var(--bg-tertiary);
     border-radius: 20px;
     color: var(--text-primary);
-    border: 1px solid var(--border-color);
 }
 
 .project-link {
     width: fit-content;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+/* Slider Controls */
+.slider-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2.5rem;
+    background: var(--bg-tertiary);
+    border-top: 1px solid var(--border-color);
+}
+
+.slider-btn {
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+}
+
+.slider-btn:hover {
+    color: var(--accent-primary);
+    border-color: var(--accent-primary);
+    transform: scale(1.1);
+}
+
+.slider-indicators {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--text-secondary);
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    opacity: 0.5;
+}
+
+.indicator.active {
+    background: var(--accent-primary);
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+@media (max-width: 992px) {
+    .project-slide {
+        padding: 2rem;
+    }
+    .project-slide-image {
+        max-height: 300px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -645,9 +622,17 @@ img {
     .project-title {
         font-size: 1.5rem;
     }
-    .project-slide-image img {
-        max-height: 250px;
-    }
+    .project-slide-image {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    margin: 0 auto;
+}
 }
 /* ==========================================================================
    Process Section (How I Turn Your Idea Into A Product)
@@ -1179,15 +1164,4 @@ img {
     .carousel-container::after {
         display: none;
     }
-}
-
-@media (max-width: 768px) {
-    .slider-btn {
-        opacity: 0.8; /* Always visible on mobile */
-        width: 40px;
-        height: 40px;
-        font-size: 1.25rem;
-    }
-    .prev-btn { left: 10px; }
-    .next-btn { right: 10px; }
 }
