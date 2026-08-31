@@ -1,603 +1,1154 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Usman — Full-Stack AI Engineer</title>
-    <meta name="description" content="AI development, full-stack web applications, mobile apps, automation and custom software.">
-
-    <!-- Open Graph Metadata -->
-    <meta property="og:title" content="Muhammad Usman — Full-Stack AI Engineer">
-    <meta property="og:description" content="AI development, full-stack web applications, mobile apps, automation and custom software.">
-    <meta property="og:type" content="website">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <!-- Header -->
-    <header id="header" class="header">
-        <div class="container header-container">
-            <a href="#" class="logo">
-                <span class="logo-name">Muhammad Usman</span>
-                <span class="logo-short">USMAN</span>
-            </a>
-
-            <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-
-            <nav class="main-nav">
-                <ul class="nav-links">
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#connect">Connect</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                </ul>
-                <a href="#" class="btn btn-primary nav-cta dynamic-fiverr">Start a Project</a>
-            </nav>
-        </div>
-    </header>
-    <section id="hero" class="hero">
-        <div class="container hero-container">
-            <div class="hero-content">
-                <p class="eyebrow">FOUNDER & CTO @ SKYELAX</p>
-                <h1 class="hero-title">I Build Digital Products That Move Ideas Forward.</h1>
-                <p class="hero-subtitle">From AI-powered applications and intelligent automation to high-performance websites, mobile apps and custom software — I turn complex ideas into polished digital products.</p>
-                <div class="hero-ctas">
-                    <a href="#" class="btn btn-primary dynamic-fiverr">START A PROJECT</a>
-                    <a href="#projects" class="btn btn-secondary">VIEW MY WORK</a>
-                </div>
-            </div>
-            <div class="hero-image-wrapper">
-                <img src="usman.jpeg" alt="Muhammad Usman - Full-Stack AI Engineer" class="hero-image">
-                <div class="hero-glow"></div>
-            </div>
-        </div>
-    </section>
-    <section id="credibility" class="credibility">
-        <div class="container">
-            <div class="credibility-grid">
-                <div class="credibility-item">
-                    <i class="fa-brands fa-google"></i>
-                    <span>Google Student Ambassador</span>
-                </div>
-                <div class="credibility-item">
-                    <i class="fa-solid fa-rocket"></i>
-                    <span>Founder & CTO @ SKYELAX</span>
-                </div>
-                <div class="credibility-item">
-                    <i class="fa-solid fa-microscope"></i>
-                    <span>Research Presenter</span>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="services" class="services section">
-        <div class="container">
-            <h2 class="section-title">What I Can Build For You</h2>
-            <div class="services-grid">
-                <!-- AI -->
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-brain"></i></div>
-                    <h3>AI-Powered Applications</h3>
-                    <p>Build intelligent applications with modern AI models, automation and production-ready integrations.</p>
-                </div>
-                <!-- Web -->
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-code"></i></div>
-                    <h3>Full-Stack Web Apps</h3>
-                    <p>Modern, scalable web applications with responsive interfaces, robust APIs and production-ready architecture.</p>
-                </div>
-                <!-- Mobile -->
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-mobile-screen"></i></div>
-                    <h3>Mobile Applications</h3>
-                    <p>Cross-platform and native mobile experiences designed around usability, performance and real-world workflows.</p>
-                </div>
-                <!-- Custom Software -->
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-gears"></i></div>
-                    <h3>Custom Software</h3>
-                    <p>Purpose-built software designed around a specific business, operational or product requirement.</p>
-                </div>
-                <!-- AI Automation -->
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-robot"></i></div>
-                    <h3>AI Automation & Integrations</h3>
-                    <p>Intelligent retrieval systems and agentic workflows using modern LLMs to automate business operations.</p>
-                </div>
-                <!-- Business Websites -->
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-globe"></i></div>
-                    <h3>WordPress Websites</h3>
-                    <p>High-converting business websites designed to communicate value clearly and convert visitors into clients.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="why-work-with-me" class="why section">
-        <div class="container">
-            <h2 class="section-title">Why Work With Me</h2>
-            <p class="section-subtitle">I don't just write code — I focus on building reliable digital products around real business and user requirements.</p>
-            <div class="why-grid">
-                <div class="why-card">
-                    <i class="fa-solid fa-comments"></i>
-                    <h3>Clear Communication</h3>
-                    <p>Understand requirements clearly, communicate progress and keep the development process transparent.</p>
-                </div>
-                <div class="why-card">
-                    <i class="fa-solid fa-pen-ruler"></i>
-                    <h3>Custom Solutions</h3>
-                    <p>Every project is built around the client's actual requirements instead of forcing a generic template.</p>
-                </div>
-                <div class="why-card">
-                    <i class="fa-solid fa-microchip"></i>
-                    <h3>Modern Technology</h3>
-                    <p>Use appropriate modern technologies, frameworks and AI capabilities based on the project's needs.</p>
-                </div>
-                <div class="why-card">
-                    <i class="fa-solid fa-check-double"></i>
-                    <h3>Quality-Focused Development</h3>
-                    <p>Focus on clean implementation, responsive interfaces, reliable functionality and practical usability.</p>
-                </div>
-                <div class="why-card">
-                    <i class="fa-solid fa-list-check"></i>
-                    <h3>Structured Delivery</h3>
-                    <p>Break projects into clear stages with defined requirements, development, testing and deployment.</p>
-                </div>
-                <div class="why-card">
-                    <i class="fa-solid fa-headset"></i>
-                    <h3>Post-Launch Support</h3>
-                    <p>Provide reasonable support for fixing bugs, improvements and future feature extensions.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Industries Section -->
-    <section id="industries" class="industries section">
-        <div class="container">
-            <h2 class="section-title">Industries I've Worked In</h2>
-            <div class="carousel-container">
-                <div class="carousel-track">
-                    <div class="carousel-item"><i class="fa-solid fa-graduation-cap"></i><span>Education</span></div>
-                    <div class="carousel-item"><i class="fa-solid fa-laptop-code"></i><span>Technology</span></div>
-                    <div class="carousel-item"><i class="fa-solid fa-notes-medical"></i><span>Healthcare</span></div>
-                    <div class="carousel-item"><i class="fa-solid fa-briefcase"></i><span>Business</span></div>
-                    <div class="carousel-item"><i class="fa-solid fa-microscope"></i><span>Research</span></div>
-                    <div class="carousel-item"><i class="fa-solid fa-gears"></i><span>Automation</span></div>
-                    <div class="carousel-item"><i class="fa-solid fa-cart-shopping"></i><span>E-commerce</span></div>
-                    <div class="carousel-item"><i class="fa-solid fa-cloud"></i><span>SaaS</span></div>
-
-                    <div class="carousel-item"><i class="fa-solid fa-graduation-cap"></i><span>Education</span></div>
-                    <div class="carousel-item"><i class="fa-solid fa-laptop-code"></i><span>Technology</span></div>
-                    <div class="carousel-item"><i class="fa-solid fa-notes-medical"></i><span>Healthcare</span></div>
-                    <div class="carousel-item"><i class="fa-solid fa-briefcase"></i><span>Business</span></div>
-                    <div class="carousel-item"><i class="fa-solid fa-microscope"></i><span>Research</span></div>
-                    <div class="carousel-item"><i class="fa-solid fa-gears"></i><span>Automation</span></div>
-                    <div class="carousel-item"><i class="fa-solid fa-cart-shopping"></i><span>E-commerce</span></div>
-                    <div class="carousel-item"><i class="fa-solid fa-cloud"></i><span>SaaS</span></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="projects section">
-        <div class="container">
-            <h2 class="section-title">Selected Work</h2>
-
-            <!-- Image Gallery -->
-            <div class="gallery-container">
-                <div class="gallery-carousel">
-                    <div class="gallery-item"><img src="assets/1_admin_home.jpeg" alt="Dashboard Project"></div>
-                    <div class="gallery-item"><img src="assets/modern-web-design-examples-framer.jpg" alt="Web Design Project"></div>
-                    <div class="gallery-item"><img src="assets/Unexpected%20Floating%20Objects.png" alt="AI System Project"></div>
-                    <div class="gallery-item"><img src="assets/d36a7965-677f-410d-8e00-8f955eea7a54.png" alt="Application Project"></div>
-                    <div class="gallery-item"><img src="assets/FinWin-1.webp" alt="Mobile App Project"></div>
-                </div>
-            </div>
-
-
-            <div class="projects-grid">
-
-
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <div class="project-icon"><i class="fa-solid fa-brain"></i></div>
-                    <div class="project-content">
-                        <span class="project-category">AI Application</span>
-                        <h3 class="project-title">Enterprise RAG System</h3>
-                        <p class="project-desc">Intelligent document retrieval and processing system using advanced LLMs and vector databases.</p>
-                        <div class="project-tags">
-                            <span>Python</span>
-                            <span>LangChain</span>
-                            <span>OpenAI</span>
-                        </div>
-                        <a href="https://github.com/useratnns" target="_blank" rel="noopener noreferrer" class="btn btn-outline project-link mt-2"><i class="fa-brands fa-github"></i> View on GitHub</a>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <div class="project-icon"><i class="fa-solid fa-chart-line"></i></div>
-                    <div class="project-content">
-                        <span class="project-category">Web Application</span>
-                        <h3 class="project-title">SaaS Dashboard</h3>
-                        <p class="project-desc">Scalable analytics dashboard built for real-time data processing and visualization.</p>
-                        <div class="project-tags">
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>PostgreSQL</span>
-                        </div>
-                        <a href="https://github.com/useratnns" target="_blank" rel="noopener noreferrer" class="btn btn-outline project-link mt-2"><i class="fa-brands fa-github"></i> View on GitHub</a>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-card">
-                    <div class="project-icon"><i class="fa-solid fa-bolt"></i></div>
-                    <div class="project-content">
-                        <span class="project-category">Mobile Application</span>
-                        <h3 class="project-title">Workflow Automator</h3>
-                        <p class="project-desc">Cross-platform mobile application to automate daily operations and team workflows.</p>
-                        <div class="project-tags">
-                            <span>Flutter</span>
-                            <span>Firebase</span>
-                        </div>
-                        <a href="https://github.com/useratnns" target="_blank" rel="noopener noreferrer" class="btn btn-outline project-link mt-2"><i class="fa-brands fa-github"></i> View on GitHub</a>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="project-card">
-                    <div class="project-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                    <div class="project-content">
-                        <span class="project-category">AI-Powered System</span>
-                        <h3 class="project-title">EvaLock</h3>
-                        <p class="project-desc">AI-powered School Management System ensuring robust operations and security integrations.</p>
-                        <div class="project-tags">
-                            <span>Next.js</span>
-                            <span>AI Integration</span>
-                        </div>
-                        <a href="https://linkedin.com/in/musman100official" target="_blank" rel="noopener noreferrer" class="btn btn-outline project-link mt-2"><i class="fa-brands fa-linkedin"></i> View on LinkedIn</a>
-                    </div>
-                </div>
-
-                <!-- Project 5 -->
-                <div class="project-card">
-                    <div class="project-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-                    <div class="project-content">
-                        <span class="project-category">Education Platform</span>
-                        <h3 class="project-title">StudyHub LMS</h3>
-                        <p class="project-desc">Comprehensive Learning Management System facilitating online education and content delivery.</p>
-                        <div class="project-tags">
-                            <span>Full-Stack</span>
-                            <span>PostgreSQL</span>
-                        </div>
-                        <a href="https://github.com/useratnns" target="_blank" rel="noopener noreferrer" class="btn btn-outline project-link mt-2"><i class="fa-brands fa-github"></i> View on GitHub</a>
-                    </div>
-                </div>
-
-                <!-- Project 6 -->
-                <div class="project-card">
-                    <div class="project-icon"><i class="fa-solid fa-users"></i></div>
-                    <div class="project-content">
-                        <span class="project-category">Community App</span>
-                        <h3 class="project-title">Campus Connect</h3>
-                        <p class="project-desc">Student community and campus application enhancing interaction and information sharing.</p>
-                        <div class="project-tags">
-                            <span>Mobile</span>
-                            <span>Firebase</span>
-                        </div>
-                        <a href="https://github.com/useratnns" target="_blank" rel="noopener noreferrer" class="btn btn-outline project-link mt-2"><i class="fa-brands fa-github"></i> View on GitHub</a>
-                    </div>
-                </div>
-
-                <!-- Project 7 -->
-                <div class="project-card">
-                    <div class="project-icon"><i class="fa-solid fa-gear"></i></div>
-                    <div class="project-content">
-                        <span class="project-category">Hardware & Automation</span>
-                        <h3 class="project-title">Honey Bee Venom Extractor</h3>
-                        <p class="project-desc">Engineering and hardware automation machine streamlining specialized extraction workflows.</p>
-                        <div class="project-tags">
-                            <span>Automation</span>
-                            <span>Hardware</span>
-                        </div>
-                        <a href="https://github.com/useratnns" target="_blank" rel="noopener noreferrer" class="btn btn-outline project-link mt-2"><i class="fa-brands fa-github"></i> View on GitHub</a>
-                    </div>
-                </div>
-
-                <!-- Project 8 -->
-                <div class="project-card">
-                    <div class="project-icon"><i class="fa-solid fa-leaf"></i></div>
-                    <div class="project-content">
-                        <span class="project-category">Research</span>
-                        <h3 class="project-title">AI for Climate Resilience</h3>
-                        <p class="project-desc">Research project on environmental AI modeling and predictive insights.</p>
-                        <div class="project-tags">
-                            <span>Python</span>
-                            <span>PyTorch</span>
-                        </div>
-                        <a href="https://linkedin.com/in/musman100official" target="_blank" rel="noopener noreferrer" class="btn btn-outline project-link mt-2"><i class="fa-brands fa-linkedin"></i> View on LinkedIn</a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <section id="skills" class="skills section">
-        <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-grid">
-
-                <div class="skill-category">
-                    <h3>Web & Mobile Frontend</h3>
-                    <div class="skill-pills">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span>
-                        <span>TypeScript</span>
-                        <span>Tailwind CSS</span>
-                        <span>React</span>
-                        <span>Next.js</span>
-                        <span>WordPress</span>
-                        <span>Flutter</span>
-                        <span>Dart</span>
-                        <span>React Native</span>
-                        <span>Native Android</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Backend & API Development</h3>
-                    <div class="skill-pills">
-                        <span>Node.js</span>
-                        <span>FastAPI</span>
-                        <span>Python</span>
-                        <span>REST APIs</span>
-                        <span>WebSockets</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Databases & Cloud Backends</h3>
-                    <div class="skill-pills">
-                        <span>PostgreSQL</span>
-                        <span>MongoDB</span>
-                        <span>SQLite</span>
-                        <span>Firebase</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Artificial Intelligence</h3>
-                    <div class="skill-pills">
-                        <span>OpenAI API</span>
-                        <span>RAG</span>
-                        <span>LangChain</span>
-                        <span>LangGraph</span>
-                        <span>Ollama</span>
-                        <span>Hugging Face</span>
-                        <span>PyTorch</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Software Engineering & DevOps</h3>
-                    <div class="skill-pills">
-                        <span>Git</span>
-                        <span>Docker</span>
-                        <span>GitHub Actions</span>
-                        <span>CI/CD</span>
-                        <span>Postman</span>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <section id="about" class="about section">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <p class="about-lead">I am Muhammad Usman, a Full-Stack AI Engineer and Founder & CTO @ SKYELAX.</p>
-                <p>My focus is entirely on building digital products that create real business value. Whether it's integrating complex AI models, architecting full-stack web platforms, developing mobile applications, or implementing smart automation, I specialize in turning ambitious ideas into production-ready software.</p>
-                <div class="about-ctas mt-2">
-                    <a href="#connect" class="btn btn-primary">DISCUSS YOUR PROJECT</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="process" class="process section">
-        <div class="container">
-            <h2 class="section-title">How I Turn Your Idea Into A Product</h2>
-            <div class="process-grid">
-                <div class="process-step">
-                    <div class="step-number">01</div>
-                    <h3>Discover</h3>
-                    <p>Understand your idea, business problem, users and requirements.</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">02</div>
-                    <h3>Plan</h3>
-                    <p>Define the features, technology, architecture and development roadmap.</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">03</div>
-                    <h3>Design</h3>
-                    <p>Create a clear, intuitive and responsive user experience.</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">04</div>
-                    <h3>Build</h3>
-                    <p>Develop the product using the most suitable technologies.</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">05</div>
-                    <h3>Test</h3>
-                    <p>Test functionality, responsiveness, performance and usability.</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">06</div>
-                    <h3>Launch</h3>
-                    <p>Deploy the product and provide the required handover and support.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="connect" class="connect section">
-        <div class="container connect-container" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-            <h2 class="section-title">Let's Connect</h2>
-            <p class="connect-desc">Have an idea, project requirement, website, mobile app, AI solution or custom software requirement?<br>Let's discuss what you're trying to build and find the right technical approach.</p>
-
-            <div class="connect-cta-wrapper mt-3 mb-3">
-                 <a href="#" class="btn btn-primary btn-large dynamic-fiverr">Start a Project</a>
-            </div>
-
-            <div class="connect-links mt-3">
-                <a href="#" class="btn btn-outline connect-item dynamic-whatsapp" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-whatsapp"></i>
-                    Message on WhatsApp
-                </a>
-                <a href="#" class="btn btn-outline connect-item dynamic-linkedin" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-linkedin"></i>
-                    Connect on LinkedIn
-                </a>
-                <a href="#" class="btn btn-outline connect-item dynamic-email" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-solid fa-envelope"></i>
-                    Email Me
-                </a>
-                <a href="#" class="btn btn-outline connect-item dynamic-github" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-github"></i>
-                    GitHub
-                </a>
-            </div>
-        </div>
-    </section>
-    <section id="faq" class="faq section">
-        <div class="container">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            <div class="faq-accordion">
-                <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>Can you handle both front-end and back-end development?</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes. I can work across frontend interfaces, backend APIs, databases and deployment depending on the project requirements.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>What technologies do you specialize in?</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>I work with modern web, mobile, backend and AI technologies including React, Next.js, Node.js, Python, Flutter, WordPress, MongoDB, PostgreSQL and modern AI tooling.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>Can you integrate AI into an existing application?</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes. AI capabilities such as LLM APIs, RAG systems, intelligent search and automation can be integrated according to the application's requirements.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>Can you build a complete web or mobile application?</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes. I can handle the development process from requirements and architecture through implementation, testing and deployment.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>Can you integrate third-party APIs and services?</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes. I can integrate appropriate third-party APIs, payment systems, communication services, AI services and other external platforms based on project requirements.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>How do you approach a new project?</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>I first understand the requirements and goals, then define the appropriate architecture, technology and development plan before implementation.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>Do you provide support after deployment?</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes. Post-launch bug fixes, improvements and additional features can be discussed according to the project requirements.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>How can I start a project with you?</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Use the "Start a Project" button to contact me through Fiverr, or use the available WhatsApp, LinkedIn or email options.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-<footer class="footer">
-        <div class="container footer-container">
-            <div class="footer-brand">
-                <h3>Muhammad Usman</h3>
-                <p>Founder & CTO @ SKYELAX | Full-Stack AI Engineer</p>
-                <p class="footer-tagline">Building AI-powered applications, web platforms, mobile apps and custom digital products.</p>
-            </div>
-
-            <div class="footer-social">
-                <h4>Connect</h4>
-                <div class="social-icons">
-                    <a href="#" class="dynamic-linkedin" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-                    <a href="#" class="dynamic-github" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
-                    <a href="#" class="dynamic-email" aria-label="Email" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-envelope"></i> Email</a>
-                    <a href="#" class="dynamic-whatsapp" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-                    <a href="#" class="dynamic-fiverr" aria-label="Fiverr" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-handshake"></i> Fiverr</a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <p>&copy; 2026 Muhammad Usman. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Floating WhatsApp Button -->
-    <a href="#" class="floating-whatsapp dynamic-whatsapp" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-whatsapp"></i>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Muhammad Usman — Full-Stack AI Engineer
+  </title>
+  <meta content="AI development, full-stack web applications, mobile apps, automation and custom software." name="description"/>
+  <!-- Open Graph Metadata -->
+  <meta content="Muhammad Usman — Full-Stack AI Engineer" property="og:title"/>
+  <meta content="AI development, full-stack web applications, mobile apps, automation and custom software." property="og:description"/>
+  <meta content="website" property="og:type"/>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+  <!-- Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <!-- CSS -->
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <!-- Header -->
+  <header class="header" id="header">
+   <div class="container header-container">
+    <a class="logo" href="#">
+     <span class="logo-name">
+      Muhammad Usman
+     </span>
+     <span class="logo-short">
+      USMAN
+     </span>
     </a>
-
-    <!-- Scripts -->
-    <script src="script.js"></script>
-</body>
+    <button aria-label="Toggle menu" class="mobile-menu-toggle">
+     <i class="fa-solid fa-bars">
+     </i>
+    </button>
+    <nav class="main-nav">
+     <ul class="nav-links">
+      <li>
+       <a href="#services">
+        Services
+       </a>
+      </li>
+      <li>
+       <a href="#skills">
+        Skills
+       </a>
+      </li>
+      <li>
+       <a href="#projects">
+        Projects
+       </a>
+      </li>
+      <li>
+       <a href="#about">
+        About
+       </a>
+      </li>
+      <li>
+       <a href="#connect">
+        Connect
+       </a>
+      </li>
+      <li>
+       <a href="#faq">
+        FAQ
+       </a>
+      </li>
+     </ul>
+     <a class="btn btn-primary nav-cta dynamic-fiverr" href="#">
+      Start a Project
+     </a>
+    </nav>
+   </div>
+  </header>
+  <section class="hero" id="hero">
+   <div class="container hero-container">
+    <div class="hero-content">
+     <p class="eyebrow">
+      FOUNDER &amp; CTO @ SKYELAX
+     </p>
+     <h1 class="hero-title">
+      I Build Digital Products That Move Ideas Forward.
+     </h1>
+     <p class="hero-subtitle">
+      From AI-powered applications and intelligent automation to high-performance websites, mobile apps and custom software — I turn complex ideas into polished digital products.
+     </p>
+     <div class="hero-ctas">
+      <a class="btn btn-primary dynamic-fiverr" href="#">
+       START A PROJECT
+      </a>
+      <a class="btn btn-secondary" href="#projects">
+       VIEW MY WORK
+      </a>
+     </div>
+    </div>
+    <div class="hero-image-wrapper">
+     <img alt="Muhammad Usman - Full-Stack AI Engineer" class="hero-image" src="usman.jpeg"/>
+     <div class="hero-glow">
+     </div>
+    </div>
+   </div>
+  </section>
+  <section class="credibility" id="credibility">
+   <div class="container">
+    <div class="credibility-grid">
+     <div class="credibility-item">
+      <i class="fa-brands fa-google">
+      </i>
+      <span>
+       Google Student Ambassador
+      </span>
+     </div>
+     <div class="credibility-item">
+      <i class="fa-solid fa-rocket">
+      </i>
+      <span>
+       Founder &amp; CTO @ SKYELAX
+      </span>
+     </div>
+     <div class="credibility-item">
+      <i class="fa-solid fa-microscope">
+      </i>
+      <span>
+       Research Presenter
+      </span>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section class="services section" id="services">
+   <div class="container">
+    <h2 class="section-title">
+     What I Can Build For You
+    </h2>
+    <div class="services-grid">
+     <!-- AI -->
+     <div class="service-card">
+      <div class="service-icon">
+       <i class="fa-solid fa-brain">
+       </i>
+      </div>
+      <h3>
+       AI-Powered Applications
+      </h3>
+      <p>
+       Build intelligent applications with modern AI models, automation and production-ready integrations.
+      </p>
+     </div>
+     <!-- Web -->
+     <div class="service-card">
+      <div class="service-icon">
+       <i class="fa-solid fa-code">
+       </i>
+      </div>
+      <h3>
+       Full-Stack Web Apps
+      </h3>
+      <p>
+       Modern, scalable web applications with responsive interfaces, robust APIs and production-ready architecture.
+      </p>
+     </div>
+     <!-- Mobile -->
+     <div class="service-card">
+      <div class="service-icon">
+       <i class="fa-solid fa-mobile-screen">
+       </i>
+      </div>
+      <h3>
+       Mobile Applications
+      </h3>
+      <p>
+       Cross-platform and native mobile experiences designed around usability, performance and real-world workflows.
+      </p>
+     </div>
+     <!-- Custom Software -->
+     <div class="service-card">
+      <div class="service-icon">
+       <i class="fa-solid fa-gears">
+       </i>
+      </div>
+      <h3>
+       Custom Software
+      </h3>
+      <p>
+       Purpose-built software designed around a specific business, operational or product requirement.
+      </p>
+     </div>
+     <!-- AI Automation -->
+     <div class="service-card">
+      <div class="service-icon">
+       <i class="fa-solid fa-robot">
+       </i>
+      </div>
+      <h3>
+       AI Automation &amp; Integrations
+      </h3>
+      <p>
+       Intelligent retrieval systems and agentic workflows using modern LLMs to automate business operations.
+      </p>
+     </div>
+     <!-- Business Websites -->
+     <div class="service-card">
+      <div class="service-icon">
+       <i class="fa-solid fa-globe">
+       </i>
+      </div>
+      <h3>
+       WordPress Websites
+      </h3>
+      <p>
+       High-converting business websites designed to communicate value clearly and convert visitors into clients.
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section class="why section" id="why-work-with-me">
+   <div class="container">
+    <h2 class="section-title">
+     Why Work With Me
+    </h2>
+    <p class="section-subtitle">
+     I don't just write code — I focus on building reliable digital products around real business and user requirements.
+    </p>
+    <div class="why-grid">
+     <div class="why-card">
+      <i class="fa-solid fa-comments">
+      </i>
+      <h3>
+       Clear Communication
+      </h3>
+      <p>
+       Understand requirements clearly, communicate progress and keep the development process transparent.
+      </p>
+     </div>
+     <div class="why-card">
+      <i class="fa-solid fa-pen-ruler">
+      </i>
+      <h3>
+       Custom Solutions
+      </h3>
+      <p>
+       Every project is built around the client's actual requirements instead of forcing a generic template.
+      </p>
+     </div>
+     <div class="why-card">
+      <i class="fa-solid fa-microchip">
+      </i>
+      <h3>
+       Modern Technology
+      </h3>
+      <p>
+       Use appropriate modern technologies, frameworks and AI capabilities based on the project's needs.
+      </p>
+     </div>
+     <div class="why-card">
+      <i class="fa-solid fa-check-double">
+      </i>
+      <h3>
+       Quality-Focused Development
+      </h3>
+      <p>
+       Focus on clean implementation, responsive interfaces, reliable functionality and practical usability.
+      </p>
+     </div>
+     <div class="why-card">
+      <i class="fa-solid fa-list-check">
+      </i>
+      <h3>
+       Structured Delivery
+      </h3>
+      <p>
+       Break projects into clear stages with defined requirements, development, testing and deployment.
+      </p>
+     </div>
+     <div class="why-card">
+      <i class="fa-solid fa-headset">
+      </i>
+      <h3>
+       Post-Launch Support
+      </h3>
+      <p>
+       Provide reasonable support for fixing bugs, improvements and future feature extensions.
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Industries Section -->
+  <section class="industries section" id="industries">
+   <div class="container">
+    <h2 class="section-title">
+     Industries I've Worked In
+    </h2>
+    <div class="carousel-container">
+     <div class="carousel-track">
+      <div class="carousel-item">
+       <i class="fa-solid fa-graduation-cap">
+       </i>
+       <span>
+        Education
+       </span>
+      </div>
+      <div class="carousel-item">
+       <i class="fa-solid fa-laptop-code">
+       </i>
+       <span>
+        Technology
+       </span>
+      </div>
+      <div class="carousel-item">
+       <i class="fa-solid fa-notes-medical">
+       </i>
+       <span>
+        Healthcare
+       </span>
+      </div>
+      <div class="carousel-item">
+       <i class="fa-solid fa-briefcase">
+       </i>
+       <span>
+        Business
+       </span>
+      </div>
+      <div class="carousel-item">
+       <i class="fa-solid fa-microscope">
+       </i>
+       <span>
+        Research
+       </span>
+      </div>
+      <div class="carousel-item">
+       <i class="fa-solid fa-gears">
+       </i>
+       <span>
+        Automation
+       </span>
+      </div>
+      <div class="carousel-item">
+       <i class="fa-solid fa-cart-shopping">
+       </i>
+       <span>
+        E-commerce
+       </span>
+      </div>
+      <div class="carousel-item">
+       <i class="fa-solid fa-cloud">
+       </i>
+       <span>
+        SaaS
+       </span>
+      </div>
+      <div class="carousel-item">
+       <i class="fa-solid fa-graduation-cap">
+       </i>
+       <span>
+        Education
+       </span>
+      </div>
+      <div class="carousel-item">
+       <i class="fa-solid fa-laptop-code">
+       </i>
+       <span>
+        Technology
+       </span>
+      </div>
+      <div class="carousel-item">
+       <i class="fa-solid fa-notes-medical">
+       </i>
+       <span>
+        Healthcare
+       </span>
+      </div>
+      <div class="carousel-item">
+       <i class="fa-solid fa-briefcase">
+       </i>
+       <span>
+        Business
+       </span>
+      </div>
+      <div class="carousel-item">
+       <i class="fa-solid fa-microscope">
+       </i>
+       <span>
+        Research
+       </span>
+      </div>
+      <div class="carousel-item">
+       <i class="fa-solid fa-gears">
+       </i>
+       <span>
+        Automation
+       </span>
+      </div>
+      <div class="carousel-item">
+       <i class="fa-solid fa-cart-shopping">
+       </i>
+       <span>
+        E-commerce
+       </span>
+      </div>
+      <div class="carousel-item">
+       <i class="fa-solid fa-cloud">
+       </i>
+       <span>
+        SaaS
+       </span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section class="projects section" id="projects">
+   <div class="container">
+    <h2 class="section-title">
+     Selected Work
+    </h2>
+    <div class="project-showcase">
+     <div class="project-slider">
+      <div class="project-slide active">
+       <div class="project-slide-image">
+        <img alt="Enterprise RAG System" src="assets/Unexpected%20Floating%20Objects.png"/>
+       </div>
+       <div class="project-slide-content">
+        <span class="project-category">
+         AI Application
+        </span>
+        <h3 class="project-title">
+         Enterprise RAG System
+        </h3>
+        <p class="project-desc">
+         Intelligent document retrieval and processing system using advanced LLMs and vector databases.
+        </p>
+        <div class="project-tags">
+         <span>
+          Python
+         </span>
+         <span>
+          LangChain
+         </span>
+         <span>
+          OpenAI
+         </span>
+        </div>
+        <a class="btn btn-outline project-link mt-2" href="https://github.com/useratnns" rel="noopener noreferrer" target="_blank">
+         <i class="fa-brands fa-github">
+         </i>
+         View on GitHub
+        </a>
+       </div>
+      </div>
+      <div class="project-slide">
+       <div class="project-slide-image">
+        <img alt="SaaS Dashboard" src="assets/1_admin_home.jpeg"/>
+       </div>
+       <div class="project-slide-content">
+        <span class="project-category">
+         Web Application
+        </span>
+        <h3 class="project-title">
+         SaaS Dashboard
+        </h3>
+        <p class="project-desc">
+         Scalable analytics dashboard built for real-time data processing and visualization.
+        </p>
+        <div class="project-tags">
+         <span>
+          React
+         </span>
+         <span>
+          Node.js
+         </span>
+         <span>
+          PostgreSQL
+         </span>
+        </div>
+        <a class="btn btn-outline project-link mt-2" href="https://github.com/useratnns" rel="noopener noreferrer" target="_blank">
+         <i class="fa-brands fa-github">
+         </i>
+         View on GitHub
+        </a>
+       </div>
+      </div>
+      <div class="project-slide">
+       <div class="project-slide-image">
+        <img alt="Workflow Automator" src="assets/FinWin-1.webp"/>
+       </div>
+       <div class="project-slide-content">
+        <span class="project-category">
+         Mobile Application
+        </span>
+        <h3 class="project-title">
+         Workflow Automator
+        </h3>
+        <p class="project-desc">
+         Cross-platform mobile application to automate daily operations and team workflows.
+        </p>
+        <div class="project-tags">
+         <span>
+          Flutter
+         </span>
+         <span>
+          Firebase
+         </span>
+        </div>
+        <a class="btn btn-outline project-link mt-2" href="https://github.com/useratnns" rel="noopener noreferrer" target="_blank">
+         <i class="fa-brands fa-github">
+         </i>
+         View on GitHub
+        </a>
+       </div>
+      </div>
+      <div class="project-slide">
+       <div class="project-slide-image">
+        <img alt="EvaLock" src="assets/ChatGPT%20Image%20Aug%2030%2C%202026%2C%2007_09_59%20AM.png"/>
+       </div>
+       <div class="project-slide-content">
+        <span class="project-category">
+         AI-Powered System
+        </span>
+        <h3 class="project-title">
+         EvaLock
+        </h3>
+        <p class="project-desc">
+         AI-powered School Management System ensuring robust operations and security integrations.
+        </p>
+        <div class="project-tags">
+         <span>
+          Next.js
+         </span>
+         <span>
+          AI Integration
+         </span>
+        </div>
+        <a class="btn btn-outline project-link mt-2" href="https://linkedin.com/in/musman100official" rel="noopener noreferrer" target="_blank">
+         <i class="fa-brands fa-linkedin">
+         </i>
+         View on LinkedIn
+        </a>
+       </div>
+      </div>
+      <div class="project-slide">
+       <div class="project-slide-image">
+        <img alt="StudyHub LMS" src="assets/d36a7965-677f-410d-8e00-8f955eea7a54.png"/>
+       </div>
+       <div class="project-slide-content">
+        <span class="project-category">
+         Education Platform
+        </span>
+        <h3 class="project-title">
+         StudyHub LMS
+        </h3>
+        <p class="project-desc">
+         Comprehensive Learning Management System facilitating online education and content delivery.
+        </p>
+        <div class="project-tags">
+         <span>
+          Full-Stack
+         </span>
+         <span>
+          PostgreSQL
+         </span>
+        </div>
+        <a class="btn btn-outline project-link mt-2" href="https://github.com/useratnns" rel="noopener noreferrer" target="_blank">
+         <i class="fa-brands fa-github">
+         </i>
+         View on GitHub
+        </a>
+       </div>
+      </div>
+      <div class="project-slide">
+       <div class="project-slide-image">
+        <img alt="Campus Connect" src="assets/16462b3c-7d76-486a-b23c-9df1c51afe57.png"/>
+       </div>
+       <div class="project-slide-content">
+        <span class="project-category">
+         Community App
+        </span>
+        <h3 class="project-title">
+         Campus Connect
+        </h3>
+        <p class="project-desc">
+         Student community and campus application enhancing interaction and information sharing.
+        </p>
+        <div class="project-tags">
+         <span>
+          Mobile
+         </span>
+         <span>
+          Firebase
+         </span>
+        </div>
+        <a class="btn btn-outline project-link mt-2" href="https://github.com/useratnns" rel="noopener noreferrer" target="_blank">
+         <i class="fa-brands fa-github">
+         </i>
+         View on GitHub
+        </a>
+       </div>
+      </div>
+      <div class="project-slide">
+       <div class="project-slide-image">
+        <img alt="Honey Bee Venom Extractor" src="assets/0_gaLRFAZk52EPY6WJ.webp"/>
+       </div>
+       <div class="project-slide-content">
+        <span class="project-category">
+         Hardware &amp; Automation
+        </span>
+        <h3 class="project-title">
+         Honey Bee Venom Extractor
+        </h3>
+        <p class="project-desc">
+         Engineering and hardware automation machine streamlining specialized extraction workflows.
+        </p>
+        <div class="project-tags">
+         <span>
+          Automation
+         </span>
+         <span>
+          Hardware
+         </span>
+        </div>
+        <a class="btn btn-outline project-link mt-2" href="https://github.com/useratnns" rel="noopener noreferrer" target="_blank">
+         <i class="fa-brands fa-github">
+         </i>
+         View on GitHub
+        </a>
+       </div>
+      </div>
+      <div class="project-slide">
+       <div class="project-slide-image">
+        <img alt="AI for Climate Resilience" src="assets/ChatGPT%20Image%20Aug%2030%2C%202026%2C%2007_11_48%20AM.png"/>
+       </div>
+       <div class="project-slide-content">
+        <span class="project-category">
+         Research
+        </span>
+        <h3 class="project-title">
+         AI for Climate Resilience
+        </h3>
+        <p class="project-desc">
+         Research project on environmental AI modeling and predictive insights.
+        </p>
+        <div class="project-tags">
+         <span>
+          Python
+         </span>
+         <span>
+          PyTorch
+         </span>
+        </div>
+        <a class="btn btn-outline project-link mt-2" href="https://linkedin.com/in/musman100official" rel="noopener noreferrer" target="_blank">
+         <i class="fa-brands fa-linkedin">
+         </i>
+         View on LinkedIn
+        </a>
+       </div>
+      </div>
+     </div>
+     <div class="slider-controls">
+      <button aria-label="Previous Project" class="slider-btn prev-btn">
+       <i class="fa-solid fa-chevron-left">
+       </i>
+      </button>
+      <div class="slider-indicators">
+       <button aria-label="Go to project 1" class="indicator active" data-index="0">
+       </button>
+       <button aria-label="Go to project 2" class="indicator" data-index="1">
+       </button>
+       <button aria-label="Go to project 3" class="indicator" data-index="2">
+       </button>
+       <button aria-label="Go to project 4" class="indicator" data-index="3">
+       </button>
+       <button aria-label="Go to project 5" class="indicator" data-index="4">
+       </button>
+       <button aria-label="Go to project 6" class="indicator" data-index="5">
+       </button>
+       <button aria-label="Go to project 7" class="indicator" data-index="6">
+       </button>
+       <button aria-label="Go to project 8" class="indicator" data-index="7">
+       </button>
+      </div>
+      <button aria-label="Next Project" class="slider-btn next-btn">
+       <i class="fa-solid fa-chevron-right">
+       </i>
+      </button>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section class="skills section" id="skills">
+   <div class="container">
+    <h2 class="section-title">
+     Technical Skills
+    </h2>
+    <div class="skills-grid">
+     <div class="skill-category">
+      <h3>
+       Web &amp; Mobile Frontend
+      </h3>
+      <div class="skill-pills">
+       <span>
+        HTML5
+       </span>
+       <span>
+        CSS3
+       </span>
+       <span>
+        JavaScript
+       </span>
+       <span>
+        TypeScript
+       </span>
+       <span>
+        Tailwind CSS
+       </span>
+       <span>
+        React
+       </span>
+       <span>
+        Next.js
+       </span>
+       <span>
+        WordPress
+       </span>
+       <span>
+        Flutter
+       </span>
+       <span>
+        Dart
+       </span>
+       <span>
+        React Native
+       </span>
+       <span>
+        Native Android
+       </span>
+      </div>
+     </div>
+     <div class="skill-category">
+      <h3>
+       Backend &amp; API Development
+      </h3>
+      <div class="skill-pills">
+       <span>
+        Node.js
+       </span>
+       <span>
+        FastAPI
+       </span>
+       <span>
+        Python
+       </span>
+       <span>
+        REST APIs
+       </span>
+       <span>
+        WebSockets
+       </span>
+      </div>
+     </div>
+     <div class="skill-category">
+      <h3>
+       Databases &amp; Cloud Backends
+      </h3>
+      <div class="skill-pills">
+       <span>
+        PostgreSQL
+       </span>
+       <span>
+        MongoDB
+       </span>
+       <span>
+        SQLite
+       </span>
+       <span>
+        Firebase
+       </span>
+      </div>
+     </div>
+     <div class="skill-category">
+      <h3>
+       Artificial Intelligence
+      </h3>
+      <div class="skill-pills">
+       <span>
+        OpenAI API
+       </span>
+       <span>
+        RAG
+       </span>
+       <span>
+        LangChain
+       </span>
+       <span>
+        LangGraph
+       </span>
+       <span>
+        Ollama
+       </span>
+       <span>
+        Hugging Face
+       </span>
+       <span>
+        PyTorch
+       </span>
+      </div>
+     </div>
+     <div class="skill-category">
+      <h3>
+       Software Engineering &amp; DevOps
+      </h3>
+      <div class="skill-pills">
+       <span>
+        Git
+       </span>
+       <span>
+        Docker
+       </span>
+       <span>
+        GitHub Actions
+       </span>
+       <span>
+        CI/CD
+       </span>
+       <span>
+        Postman
+       </span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section class="about section" id="about">
+   <div class="container">
+    <h2 class="section-title">
+     About Me
+    </h2>
+    <div class="about-content">
+     <p class="about-lead">
+      I am Muhammad Usman, a Full-Stack AI Engineer and Founder &amp; CTO @ SKYELAX.
+     </p>
+     <p>
+      My focus is entirely on building digital products that create real business value. Whether it's integrating complex AI models, architecting full-stack web platforms, developing mobile applications, or implementing smart automation, I specialize in turning ambitious ideas into production-ready software.
+     </p>
+     <div class="about-ctas mt-2">
+      <a class="btn btn-primary" href="#connect">
+       DISCUSS YOUR PROJECT
+      </a>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section class="process section" id="process">
+   <div class="container">
+    <h2 class="section-title">
+     How I Turn Your Idea Into A Product
+    </h2>
+    <div class="process-grid">
+     <div class="process-step">
+      <div class="step-number">
+       01
+      </div>
+      <h3>
+       Discover
+      </h3>
+      <p>
+       Understand your idea, business problem, users and requirements.
+      </p>
+     </div>
+     <div class="process-step">
+      <div class="step-number">
+       02
+      </div>
+      <h3>
+       Plan
+      </h3>
+      <p>
+       Define the features, technology, architecture and development roadmap.
+      </p>
+     </div>
+     <div class="process-step">
+      <div class="step-number">
+       03
+      </div>
+      <h3>
+       Design
+      </h3>
+      <p>
+       Create a clear, intuitive and responsive user experience.
+      </p>
+     </div>
+     <div class="process-step">
+      <div class="step-number">
+       04
+      </div>
+      <h3>
+       Build
+      </h3>
+      <p>
+       Develop the product using the most suitable technologies.
+      </p>
+     </div>
+     <div class="process-step">
+      <div class="step-number">
+       05
+      </div>
+      <h3>
+       Test
+      </h3>
+      <p>
+       Test functionality, responsiveness, performance and usability.
+      </p>
+     </div>
+     <div class="process-step">
+      <div class="step-number">
+       06
+      </div>
+      <h3>
+       Launch
+      </h3>
+      <p>
+       Deploy the product and provide the required handover and support.
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section class="connect section" id="connect">
+   <div class="container connect-container" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+    <h2 class="section-title">
+     Let's Connect
+    </h2>
+    <p class="connect-desc">
+     Have an idea, project requirement, website, mobile app, AI solution or custom software requirement?
+     <br/>
+     Let's discuss what you're trying to build and find the right technical approach.
+    </p>
+    <div class="connect-cta-wrapper mt-3 mb-3">
+     <a class="btn btn-primary btn-large dynamic-fiverr" href="#">
+      Start a Project
+     </a>
+    </div>
+    <div class="connect-links mt-3">
+     <a class="btn btn-outline connect-item dynamic-whatsapp" href="#" rel="noopener noreferrer" target="_blank">
+      <i class="fa-brands fa-whatsapp">
+      </i>
+      Message on WhatsApp
+     </a>
+     <a class="btn btn-outline connect-item dynamic-linkedin" href="#" rel="noopener noreferrer" target="_blank">
+      <i class="fa-brands fa-linkedin">
+      </i>
+      Connect on LinkedIn
+     </a>
+     <a class="btn btn-outline connect-item dynamic-email" href="#" rel="noopener noreferrer" target="_blank">
+      <i class="fa-solid fa-envelope">
+      </i>
+      Email Me
+     </a>
+     <a class="btn btn-outline connect-item dynamic-github" href="#" rel="noopener noreferrer" target="_blank">
+      <i class="fa-brands fa-github">
+      </i>
+      GitHub
+     </a>
+    </div>
+   </div>
+  </section>
+  <section class="faq section" id="faq">
+   <div class="container">
+    <h2 class="section-title">
+     Frequently Asked Questions
+    </h2>
+    <div class="faq-accordion">
+     <div class="faq-item">
+      <button aria-expanded="false" class="faq-question">
+       <span>
+        Can you handle both front-end and back-end development?
+       </span>
+       <i class="fa-solid fa-chevron-down">
+       </i>
+      </button>
+      <div class="faq-answer">
+       <p>
+        Yes. I can work across frontend interfaces, backend APIs, databases and deployment depending on the project requirements.
+       </p>
+      </div>
+     </div>
+     <div class="faq-item">
+      <button aria-expanded="false" class="faq-question">
+       <span>
+        What technologies do you specialize in?
+       </span>
+       <i class="fa-solid fa-chevron-down">
+       </i>
+      </button>
+      <div class="faq-answer">
+       <p>
+        I work with modern web, mobile, backend and AI technologies including React, Next.js, Node.js, Python, Flutter, WordPress, MongoDB, PostgreSQL and modern AI tooling.
+       </p>
+      </div>
+     </div>
+     <div class="faq-item">
+      <button aria-expanded="false" class="faq-question">
+       <span>
+        Can you integrate AI into an existing application?
+       </span>
+       <i class="fa-solid fa-chevron-down">
+       </i>
+      </button>
+      <div class="faq-answer">
+       <p>
+        Yes. AI capabilities such as LLM APIs, RAG systems, intelligent search and automation can be integrated according to the application's requirements.
+       </p>
+      </div>
+     </div>
+     <div class="faq-item">
+      <button aria-expanded="false" class="faq-question">
+       <span>
+        Can you build a complete web or mobile application?
+       </span>
+       <i class="fa-solid fa-chevron-down">
+       </i>
+      </button>
+      <div class="faq-answer">
+       <p>
+        Yes. I can handle the development process from requirements and architecture through implementation, testing and deployment.
+       </p>
+      </div>
+     </div>
+     <div class="faq-item">
+      <button aria-expanded="false" class="faq-question">
+       <span>
+        Can you integrate third-party APIs and services?
+       </span>
+       <i class="fa-solid fa-chevron-down">
+       </i>
+      </button>
+      <div class="faq-answer">
+       <p>
+        Yes. I can integrate appropriate third-party APIs, payment systems, communication services, AI services and other external platforms based on project requirements.
+       </p>
+      </div>
+     </div>
+     <div class="faq-item">
+      <button aria-expanded="false" class="faq-question">
+       <span>
+        How do you approach a new project?
+       </span>
+       <i class="fa-solid fa-chevron-down">
+       </i>
+      </button>
+      <div class="faq-answer">
+       <p>
+        I first understand the requirements and goals, then define the appropriate architecture, technology and development plan before implementation.
+       </p>
+      </div>
+     </div>
+     <div class="faq-item">
+      <button aria-expanded="false" class="faq-question">
+       <span>
+        Do you provide support after deployment?
+       </span>
+       <i class="fa-solid fa-chevron-down">
+       </i>
+      </button>
+      <div class="faq-answer">
+       <p>
+        Yes. Post-launch bug fixes, improvements and additional features can be discussed according to the project requirements.
+       </p>
+      </div>
+     </div>
+     <div class="faq-item">
+      <button aria-expanded="false" class="faq-question">
+       <span>
+        How can I start a project with you?
+       </span>
+       <i class="fa-solid fa-chevron-down">
+       </i>
+      </button>
+      <div class="faq-answer">
+       <p>
+        Use the "Start a Project" button to contact me through Fiverr, or use the available WhatsApp, LinkedIn or email options.
+       </p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <footer class="footer">
+   <div class="container footer-container">
+    <div class="footer-brand">
+     <h3>
+      Muhammad Usman
+     </h3>
+     <p>
+      Founder &amp; CTO @ SKYELAX | Full-Stack AI Engineer
+     </p>
+     <p class="footer-tagline">
+      Building AI-powered applications, web platforms, mobile apps and custom digital products.
+     </p>
+    </div>
+    <div class="footer-social">
+     <h4>
+      Connect
+     </h4>
+     <div class="social-icons">
+      <a aria-label="LinkedIn" class="dynamic-linkedin" href="#" rel="noopener noreferrer" target="_blank">
+       <i class="fa-brands fa-linkedin">
+       </i>
+       LinkedIn
+      </a>
+      <a aria-label="GitHub" class="dynamic-github" href="#" rel="noopener noreferrer" target="_blank">
+       <i class="fa-brands fa-github">
+       </i>
+       GitHub
+      </a>
+      <a aria-label="Email" class="dynamic-email" href="#" rel="noopener noreferrer" target="_blank">
+       <i class="fa-solid fa-envelope">
+       </i>
+       Email
+      </a>
+      <a aria-label="WhatsApp" class="dynamic-whatsapp" href="#" rel="noopener noreferrer" target="_blank">
+       <i class="fa-brands fa-whatsapp">
+       </i>
+       WhatsApp
+      </a>
+      <a aria-label="Fiverr" class="dynamic-fiverr" href="#" rel="noopener noreferrer" target="_blank">
+       <i class="fa-solid fa-handshake">
+       </i>
+       Fiverr
+      </a>
+     </div>
+    </div>
+   </div>
+   <div class="footer-bottom">
+    <div class="container">
+     <p>
+      © 2026 Muhammad Usman. All rights reserved.
+     </p>
+    </div>
+   </div>
+  </footer>
+  <!-- Floating WhatsApp Button -->
+  <a aria-label="Chat on WhatsApp" class="floating-whatsapp dynamic-whatsapp" href="#" rel="noopener noreferrer" target="_blank">
+   <i class="fa-brands fa-whatsapp">
+   </i>
+  </a>
+  <!-- Scripts -->
+  <script src="script.js">
+  </script>
+ </body>
 </html>
