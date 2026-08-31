@@ -116,3 +116,34 @@ document.addEventListener('DOMContentLoaded', () => {
     setupMobileMenu();
     setupFAQ();
 });
+
+// 4. Gallery Interaction
+document.addEventListener('DOMContentLoaded', () => {
+    const carousel = document.querySelector('.gallery-carousel');
+    const items = document.querySelectorAll('.gallery-item');
+    if (!carousel) return;
+
+    let currentRotation = 0;
+
+    items.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            // Calculate how much to rotate so the clicked item faces front.
+            // Items are at 0, 72, 144, 216, 288 degrees.
+            const itemRotation = index * 72;
+
+            // We want the carousel to rotate backwards relative to the item's position
+            // Add or subtract 360 to find the shortest path
+
+            // Basic rotation logic to bring it front:
+            // currentRotation - (currentRotation % 360) gives the base rotation
+            let targetRotation = -itemRotation;
+
+            // Stop auto animation to allow manual control
+            carousel.style.animation = 'none';
+
+            // Set smooth transition
+            carousel.style.transition = 'transform 0.8s ease-out';
+            carousel.style.transform = `rotateY(${targetRotation}deg)`;
+        });
+    });
+});

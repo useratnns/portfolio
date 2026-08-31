@@ -2,17 +2,17 @@
    CSS Reset & Base Styles
    ========================================================================== */
 :root {
-    --bg-color: #050b14;
-    --bg-secondary: #0a1526;
-    --bg-tertiary: #112240;
+    --bg-color: #0d1117;
+    --bg-secondary: #161b22;
+    --bg-tertiary: #21262d;
 
-    --text-primary: #ccd6f6;
-    --text-secondary: #8892b0;
+    --text-primary: #c9d1d9;
+    --text-secondary: #8b949e;
     --text-white: #ffffff;
 
-    --accent-primary: #64ffda;
-    --accent-secondary: #3b82f6;
-    --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    --accent-primary: #58a6ff;
+    --accent-secondary: #1f6feb;
+    --accent-gradient: linear-gradient(135deg, #238636 0%, #2ea043 100%);
 
     --border-color: rgba(255, 255, 255, 0.1);
     --border-radius: 12px;
@@ -880,5 +880,243 @@ img {
 
     .connect-links {
         flex-direction: column;
+    }
+}
+/* ==========================================================================
+   Let's Connect Section Enhancement
+   ========================================================================== */
+#connect .section-title {
+    margin-bottom: 2rem;
+    display: block; /* ensure it behaves normally for flex centering */
+    text-align: center;
+    position: relative;
+    left: 0;
+    transform: none;
+}
+
+#connect .section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#connect .connect-container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#connect .connect-desc {
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+}
+
+/* ==========================================================================
+   3D Circular Image Gallery
+   ========================================================================== */
+.gallery-container {
+    perspective: 1000px;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery-carousel {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotateCarousel 20s infinite linear;
+}
+
+.gallery-item {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 25px;
+    top: 25px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 3px solid var(--border-color);
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Distribute 5 items evenly around the circle */
+.gallery-item:nth-child(1) { transform: rotateY(0deg) translateZ(250px); }
+.gallery-item:nth-child(2) { transform: rotateY(72deg) translateZ(250px); }
+.gallery-item:nth-child(3) { transform: rotateY(144deg) translateZ(250px); }
+.gallery-item:nth-child(4) { transform: rotateY(216deg) translateZ(250px); }
+.gallery-item:nth-child(5) { transform: rotateY(288deg) translateZ(250px); }
+
+@keyframes rotateCarousel {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(-360deg); }
+}
+
+.gallery-carousel:hover {
+    animation-play-state: paused;
+}
+
+@media (max-width: 768px) {
+    .gallery-container {
+        height: 300px;
+    }
+    .gallery-carousel {
+        width: 180px;
+        height: 180px;
+    }
+    .gallery-item {
+        width: 140px;
+        height: 140px;
+        left: 20px;
+        top: 20px;
+    }
+    /* Reduce Z distance for mobile */
+    .gallery-item:nth-child(1) { transform: rotateY(0deg) translateZ(160px); }
+    .gallery-item:nth-child(2) { transform: rotateY(72deg) translateZ(160px); }
+    .gallery-item:nth-child(3) { transform: rotateY(144deg) translateZ(160px); }
+    .gallery-item:nth-child(4) { transform: rotateY(216deg) translateZ(160px); }
+    .gallery-item:nth-child(5) { transform: rotateY(288deg) translateZ(160px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .gallery-carousel {
+        animation: none;
+        transform: rotateY(0deg);
+    }
+}
+
+/* ==========================================================================
+   Enhance "Why Work With Me" Animations
+   ========================================================================== */
+.why-card i {
+    animation: floatIcon 4s ease-in-out infinite;
+    display: inline-block;
+}
+
+@keyframes floatIcon {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Add slight animation delays to different cards so they don't float perfectly in sync */
+.why-card:nth-child(1) i { animation-delay: 0s; }
+.why-card:nth-child(2) i { animation-delay: 0.5s; }
+.why-card:nth-child(3) i { animation-delay: 1s; }
+.why-card:nth-child(4) i { animation-delay: 1.5s; }
+.why-card:nth-child(5) i { animation-delay: 2s; }
+.why-card:nth-child(6) i { animation-delay: 2.5s; }
+
+@media (prefers-reduced-motion: reduce) {
+    .why-card i {
+        animation: none;
+    }
+}
+
+/* ==========================================================================
+   Industries Carousel
+   ========================================================================== */
+.industries {
+    background: var(--bg-color);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 2rem 0;
+}
+
+/* Create gradient fades on the sides for a premium look */
+.carousel-container::before,
+.carousel-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    z-index: 2;
+}
+
+.carousel-container::before {
+    left: 0;
+    background: linear-gradient(to right, var(--bg-color) 0%, transparent 100%);
+}
+
+.carousel-container::after {
+    right: 0;
+    background: linear-gradient(to left, var(--bg-color) 0%, transparent 100%);
+}
+
+.carousel-track {
+    display: flex;
+    width: calc(250px * 16); /* 8 items original + 8 duplicated * item width roughly */
+    animation: scrollCarousel 40s linear infinite;
+    gap: 3rem;
+    align-items: center;
+}
+
+.carousel-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    min-width: 150px;
+    color: var(--text-secondary);
+    transition: var(--transition);
+}
+
+.carousel-item i {
+    font-size: 2.5rem;
+    color: var(--text-primary);
+}
+
+.carousel-item span {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.carousel-item:hover {
+    color: var(--accent-primary);
+}
+
+.carousel-item:hover i {
+    color: var(--accent-primary);
+}
+
+@keyframes scrollCarousel {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-100% / 2)); } /* scroll halfway which is the original set */
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .carousel-track {
+        animation: none;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .carousel-container::before,
+    .carousel-container::after {
+        display: none;
     }
 }
