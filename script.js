@@ -3,10 +3,11 @@
  * Centralized links for easy replacement in the future.
  */
 const portfolioConfig = {
-    email: "usmanboota.dev@gmail.com",
+    email: "https://mail.google.com/mail/?view=cm&fs=1&to=usmanboota.dev@gmail.com",
     whatsapp: "https://wa.me/923000437358",
     linkedin: "https://linkedin.com/in/musman100official",
-    github: "https://github.com/useratnns"
+    github: "https://github.com/useratnns",
+    fiverr: "https://www.fiverr.com/musman100"
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,7 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // Email
         const emailLinks = document.querySelectorAll('.dynamic-email');
         emailLinks.forEach(link => {
-            link.href = `mailto:${portfolioConfig.email}`;
+            link.href = portfolioConfig.email;
+            link.target = "_blank";
+            link.rel = "noopener noreferrer";
         });
 
         // WhatsApp
@@ -37,10 +40,12 @@ document.addEventListener('DOMContentLoaded', () => {
             link.href = portfolioConfig.github;
         });
 
-        // General mailto CTA (e.g. "Start a Project")
-        const mailtoLinks = document.querySelectorAll('.dynamic-mailto');
-        mailtoLinks.forEach(link => {
-            link.href = `mailto:${portfolioConfig.email}?subject=New Project Inquiry`;
+        // Fiverr / Primary CTAs
+        const fiverrLinks = document.querySelectorAll('.dynamic-fiverr');
+        fiverrLinks.forEach(link => {
+            link.href = portfolioConfig.fiverr;
+            link.target = "_blank";
+            link.rel = "noopener noreferrer";
         });
     };
 

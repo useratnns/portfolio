@@ -104,8 +104,17 @@ img {
     border-radius: 2px;
 }
 
+.section-subtitle {
+    text-align: center;
+    max-width: 800px;
+    margin: -1.5rem auto 3rem auto;
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+}
+
 .mt-2 { margin-top: 2rem; }
 .mt-3 { margin-top: 3rem; }
+.mb-3 { margin-bottom: 3rem; }
 
 /* Buttons */
 .btn {
@@ -120,6 +129,7 @@ img {
     transition: var(--transition);
     border: none;
     outline: none;
+    gap: 0.5rem;
 }
 
 .btn-primary {
@@ -344,7 +354,7 @@ img {
    ========================================================================== */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
@@ -354,6 +364,9 @@ img {
     border-radius: var(--border-radius);
     padding: 2.5rem 2rem;
     transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .service-card:hover {
@@ -384,44 +397,45 @@ img {
     color: var(--text-white);
 }
 
+.service-card p {
+    flex-grow: 1;
+}
+
 /* ==========================================================================
-   Tech Stack Section
+   Why Work With Me Section
    ========================================================================== */
-.tech-stack {
+.why {
     background: var(--bg-secondary);
 }
 
-.tech-grid {
+.why-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
 }
 
-.tech-category h3 {
-    font-size: 1.125rem;
+.why-card {
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    transition: var(--transition);
+}
+
+.why-card:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.why-card i {
+    font-size: 2rem;
+    color: var(--accent-primary);
     margin-bottom: 1.5rem;
+}
+
+.why-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
     color: var(--text-white);
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 0.5rem;
-}
-
-.tech-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-}
-
-.tech-list li {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    color: var(--text-secondary);
-}
-
-.tech-list i {
-    width: 20px;
-    text-align: center;
-    color: var(--accent-secondary);
 }
 
 /* ==========================================================================
@@ -479,7 +493,6 @@ img {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin-bottom: 1.5rem;
 }
 
 .project-tags span {
@@ -490,9 +503,96 @@ img {
     color: var(--text-primary);
 }
 
-.project-link {
-    width: fit-content;
-    gap: 0.5rem;
+/* ==========================================================================
+   Process Section (How I Turn Your Idea Into A Product)
+   ========================================================================== */
+.process {
+    background: var(--bg-secondary);
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    position: relative;
+}
+
+.process-step {
+    background: var(--bg-color);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    position: relative;
+    transition: var(--transition);
+}
+
+.process-step:hover {
+    border-color: var(--accent-secondary);
+    transform: translateY(-5px);
+}
+
+.step-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: rgba(59, 130, 246, 0.15);
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.process-step h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--text-white);
+    position: relative;
+    z-index: 1;
+}
+
+.process-step p {
+    position: relative;
+    z-index: 1;
+}
+
+/* ==========================================================================
+   Tech Stack / Skills Section
+   ========================================================================== */
+.skills-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.skill-category h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-white);
+    text-align: center;
+}
+
+.skill-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.skill-pills span {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    padding: 0.5rem 1.25rem;
+    border-radius: 30px;
+    font-weight: 500;
+    color: var(--text-primary);
+    transition: var(--transition);
+}
+
+.skill-pills span:hover {
+    border-color: var(--accent-secondary);
+    color: var(--text-white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.1);
 }
 
 /* ==========================================================================
@@ -520,46 +620,27 @@ img {
 }
 
 /* ==========================================================================
-   Contact Section
+   Connect Section
    ========================================================================== */
-.contact-container {
+.connect-container {
     text-align: center;
     max-width: 800px;
 }
 
-.contact-desc {
+.connect-desc {
     font-size: 1.125rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
-.contact-links {
+.connect-links {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
-.contact-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.75rem;
-    color: var(--text-primary);
-}
-
-.contact-item i {
-    font-size: 2rem;
-    color: var(--accent-secondary);
-    transition: var(--transition);
-}
-
-.contact-item:hover i {
-    transform: translateY(-3px);
-    color: var(--text-white);
-}
-
-.contact-item span {
-    font-weight: 500;
+.connect-item {
+    min-width: 200px;
 }
 
 /* ==========================================================================
@@ -623,10 +704,16 @@ img {
 }
 
 .footer-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 3rem;
     margin-bottom: 3rem;
+}
+
+.footer-brand {
+    max-width: 400px;
 }
 
 .footer-brand h3 {
@@ -634,26 +721,21 @@ img {
     margin-bottom: 0.5rem;
 }
 
-.footer-links h4, .footer-social h4 {
+.footer-brand .footer-tagline {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+
+.footer-social h4 {
     color: var(--text-white);
     margin-bottom: 1.5rem;
     font-size: 1.125rem;
 }
 
-.footer-links ul {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-}
-
-.footer-links a:hover {
-    color: var(--accent-secondary);
-}
-
 .social-icons {
     display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
+    gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .social-icons a {
@@ -704,6 +786,10 @@ img {
    Media Queries
    ========================================================================== */
 @media (max-width: 992px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .hero-container {
         grid-template-columns: 1fr;
         text-align: center;
@@ -717,13 +803,13 @@ img {
     .hero-ctas {
         justify-content: center;
     }
-
-    .footer-container {
-        grid-template-columns: 1fr 1fr;
-    }
 }
 
 @media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
     .section-title {
         font-size: 2rem;
     }
@@ -757,6 +843,7 @@ img {
         flex-direction: column;
         text-align: center;
         gap: 2rem;
+        margin-bottom: 2rem;
     }
 
     .nav-links a {
@@ -772,13 +859,13 @@ img {
     }
 
     .footer-container {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
-        gap: 2rem;
     }
 
     .social-icons {
-        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -791,8 +878,7 @@ img {
         flex-direction: column;
     }
 
-    .contact-links {
+    .connect-links {
         flex-direction: column;
-        gap: 2rem;
     }
 }
