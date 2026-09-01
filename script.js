@@ -7,7 +7,7 @@ const portfolioConfig = {
     whatsapp: "https://wa.me/923000437358",
     linkedin: "https://linkedin.com/in/musman100official",
     github: "https://github.com/useratnns",
-    fiverr: "https://www.fiverr.com/musman100"
+    fiverr: "https://www.fiverr.com/usman_devs/"
 };
 
 document.addEventListener('DOMContentLoaded', () => {
