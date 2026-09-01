@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Auto Navigation
         const startInterval = () => {
-            slideInterval = setInterval(nextSlide, 5000);
+            slideInterval = setInterval(nextSlide, 3000);
         };
 
         const resetInterval = () => {
